@@ -5,7 +5,8 @@ import { Word } from "@/types";
 import SearchBar from "./SearchBar";
 import FilterPanel from "./FilterPanel";
 import WordCard from "./WordCard";
-import { BookOpen, Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { BookOpen, Menu, X, ChevronLeft, ChevronRight, CalendarDays } from "lucide-react";
+import Link from "next/link";
 
 const PAGE_SIZE = 48;
 
@@ -172,6 +173,14 @@ export default function WordlistApp() {
               Oxford Wordlist
             </span>
           </div>
+
+          <Link
+            href="/days"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-blue-600 hover:bg-blue-50 transition-colors flex-shrink-0"
+          >
+            <CalendarDays size={15} />
+            <span className="hidden sm:block">Daily Verbs</span>
+          </Link>
 
           <div className="flex-1 max-w-md">
             <SearchBar value={search} onChange={handleSearch} />
