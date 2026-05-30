@@ -12,4 +12,7 @@ export interface Word {
   audio_uk_ogg: string | null;
   audio_us_mp3: string | null;
   audio_us_ogg: string | null;
+  az?: string;
+  tr?: string;
+  ru?: string;
 }
